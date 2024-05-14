@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<div th:fragment="footer">
+  <footer class="footer">
+    <div class="links">
+      <a target="_blank" rel="noopener noreferrer" th:href="@{${#messages.msg('home.github')}}"><img class="link-item" th:src="@{/static/img/Vector.svg}" alt="Vector Icon"></a>
+      <a target="_blank" rel="noopener noreferrer" th:href="@{${#messages.msg('home.linkedin')}}"><img class="link-item" th:src="@{/static/img/insta.svg}" alt="Instagram Icon"></a>
+      <a target="_blank" style="margin-top: 4px;" rel="noopener noreferrer" th:href="@{${#messages.msg('home.twitter')}}"><img class="link-item" th:src="@{/static/img/Group.svg}" alt="Group Icon"></a>
+      <a target="_blank" rel="noopener noreferrer" th:href="@{${#messages.msg('home.linkedin')}}"><img class="link-item" th:src="@{/static/img/Linkedin.svg}" alt="LinkedIn Icon"></a>
+    </div>
+    <div style="color: white;">Copyright ©2024 All rights reserved</div>
+  </footer>
+</div>
+
+</html>
+
+

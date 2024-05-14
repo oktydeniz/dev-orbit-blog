@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "RobotoCondensed";
+    src: url("fonts/RobotoCondensed-Regular.ttf");
+}
+@font-face {
+    font-family: "RobotoCondensed";
+    src: url("fonts/RobotoCondensed-Bold.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "RobotoCondensed";
+    src: url("fonts/RobotoCondensed-BoldItalic.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "RobotoCondensed";
+    src: url("fonts/RobotoCondensed-Italic.ttf");
+    font-style: italic;
+}
+@font-face {
+    font-family: "RobotoCondensed";
+    src: url("fonts/RobotoCondensed-Light.ttf");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "RobotoCondensed";
+    src: url("fonts/RobotoCondensed-LightItalic.ttf");
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: "RobotoCondensed";
+    src: url("fonts/RobotoCondensed-Light.ttf");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "RobotoCondensed";
+    src: url("fonts/RobotoCondensed-LightItalic.ttf");
+    font-weight: 500;
+    font-style: italic;
+}
+/* Generic styles */
+
+
+@font-face {
+font-family: "SairaCondensed";
+src: url("fonts/SairaCondensed-Regular.ttf");
+}
+@font-face {
+font-family: "SairaCondensed";
+src: url("fonts/SairaCondensed-Bold.ttf");
+font-weight: bold;
+}
+
+@font-face {
+font-family: "SairaCondensed";
+src: url("fonts/SairaCondensed-Light.ttf");
+font-weight: 300;
+}
+
+@font-face {
+font-family: "SairaCondensed";
+src: url("fonts/SairaCondensed-Light.ttf");
+font-weight: 500;
+}
+
+* {
+    font-family: 'RobotoCondensed' !important;
+}

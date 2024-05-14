@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          name="viewport">
+    <meta name="author" content="odeniz">
+    <link rel="icon" type="image/x-icon" th:href="@{/static/img/logo.svg}">
+    <meta name="Description" content="Prime Sport Facility">
+    <meta name="keywords"
+          content="Programing, java, python, android, kotlin,swift, obj-c, iOS, yazilima nasil baslarim, how to start coding, coding, coding with java,
+computer programing, css, html, nasil yazilim ogrenirim">
+    <link th:href="@{/static/css/reset.css}" rel="stylesheet" type="text/css" media="screen">
+    <link th:href="@{/static/stylesheets/admin.css}" rel="stylesheet" type="text/css" media="screen">
+    <script type="text/javascript" th:src="@{/static/plugin/jquery.min.js}"></script>
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/bootstrap/css/bootstrap.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/font.css}">
+    <title>Home</title>
+</head>
+<body>
+
+<div class="section">
+
+    <div class="container">
+
+        <div layout:fragment="page_content"></div>
+
+    </div>
+</div>
+
+
+
+<script th:src="@{/static/plugin/bootstrap/bootstrap.bundle.min.js}"></script>
+
+<div layout:fragment="page_scripts"></div>
+
+<script th:src="@{/static/js/admin.js}"></script>
+</body>
+</html>

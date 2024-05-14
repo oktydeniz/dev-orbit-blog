@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html"
+      lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{master}">
+<head>
+  <title th:text="${category?.title} ?: 'Articles'">Articles</title>
+</head>
+<body>
+<div layout:fragment="page_content">
+  <div class="context">
+    <div class="articles show-all-articles">
+      <div class="articles-cnt" th:if="${not #lists.isEmpty(articles)}">
+        <div class="item" th:each="article : ${articles}" th:attr="data-id=${article.id}">
+          <a th:href="@{|/article/${article.slug}|}">
+            <img th:src="${article.url}" class="item-img">
+            <div class="type-date" th:attr="data-date=${article.createdAt}">[[${article.category.title}]]</div>
+            <div class="header">
+              [[${article.title}]]
+            </div>
+            <div class="article-contents" th:attr="data-content=${article.content}"></div>
+          </a>
+          <div class="author-inf">
+            <div class="avatar">
+              <img class="avatar-img" th:src="${article.author.avatarUrl}">
+            </div>
+            <div class="info">
+              <p class="name">
+                [[${article.author.userName}]]
+              </p>
+              <p class="title">
+                [[${article.author.title}]]
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div th:unless="${not #lists.isEmpty(articles)}" class="no-article">
+        <p>Hey there! Looks like you've caught us still working on this part.</p>
+        <p>But don't worry, we’ll have some awesome articles ready for you shortly. Stay tuned!</p>
+      </div>
+
+    </div>
+  </div>
+  <div id="no-result" class="no-article" style="display:none;">
+    <p >We could not find any article about your search!<a href="/" class="href-a">Go Back</a></p>
+  </div>
+
+  <div class="result-set-content articles">
+    <div class="result-set" id="articlesContainer">
+
+    </div>
+  </div>
+</div>
+
+<div layout:fragment="page_scripts"></div>
+</body>
+</html>

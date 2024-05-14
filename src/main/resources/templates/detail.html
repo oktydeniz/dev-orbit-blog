@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html"
+      lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{master}">
+<head>
+    <title>[[${article.title}]]</title>
+</head>
+<body>
+<div layout:fragment="page_content">
+
+    <div class="detail">
+        <div class="type-date" th:attr="data-date=${article.createdAt}">[[${article.category.title}]]</div>
+        <div class="header">
+            [[${article.title}]]
+        </div>
+
+        <div class="author-inf">
+            <div class="avatar">
+                <img class="avatar-img" th:src="${article.author.avatarUrl}">
+            </div>
+            <div class="info">
+                <p class="name">
+                    [[${article.author.userName}]]
+                </p>
+                <p class="title">
+                    [[${article.author.title}]]
+                </p>
+            </div>
+        </div>
+        <img class="detail-img" th:src="${article.url}">
+        <div class="article-content" th:utext="${article.content}"></div>
+    </div>
+</div>
+
+<div layout:fragment="page_scripts"></div>
+</body>
+</html>

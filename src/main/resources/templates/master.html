@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        name="viewport">
+  <meta name="author" content="odeniz">
+  <link rel="icon" type="image/x-icon" th:href="@{/static/img/logo.svg}">
+  <meta name="Description" content="Prime Sport Facility">
+  <meta name="keywords"
+        content="Programing, java, python, android, kotlin,swift, obj-c, iOS, yazilima nasil baslarim, how to start coding, coding, coding with java,
+computer programing, css, html, nasil yazilim ogrenirim">
+  <link th:href="@{/static/css/reset.css}" rel="stylesheet" type="text/css" media="screen">
+  <link th:href="@{/static/stylesheets/main.css}" rel="stylesheet" type="text/css" media="screen">
+  <script type="text/javascript" th:src="@{/static/plugin/jquery.min.js}"></script>
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" th:href="@{/static/css/bootstrap/css/bootstrap.css}">
+  <link rel="stylesheet" type="text/css" th:href="@{/static/css/font.css}">
+  <title>Home</title>
+</head>
+<body>
+
+<div class="section">
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/algorithm">Algorithm</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Web Development
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/django">Django</a></li>
+              <li><a class="dropdown-item" href="/spring">Spring Boot</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Mobile Development
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="android">Android</a></li>
+              <li><a class="dropdown-item" href="ios">iOS</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Languages
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/java">Java</a></li>
+              <li><a class="dropdown-item" href="/python">Python</a></li>
+              <li><a class="dropdown-item" href="/kotlin">Kotlin</a></li>
+              <li><a class="dropdown-item" href="/swift">Swift</a></li>
+              <li><a class="dropdown-item" href="/js">JavaScript</a></li>
+              <li><a class="dropdown-item" href="/r">R</a></li>
+              <li><a class="dropdown-item" href="obj-c">Obj-C</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Database
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/postgres">Postgres</a></li>
+              <li><a class="dropdown-item" href="/oracle">Oracle</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/data-science">Data Science</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        </ul>
+        <input class="me-2 search-bar" type="text" placeholder="Search" aria-label="Search">
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div layout:fragment="page_content"></div>
+
+  </div>
+  <div lang="en" th:replace="footer :: footer"> </div>
+</div>
+
+<script th:src="@{/static/plugin/bootstrap/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/static/js/main.js}"></script>
+<div layout:fragment="page_scripts"></div>
+
+</body>
+</html>

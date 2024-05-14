@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      lang="en"
+>
+<head>
+    <title>Login</title>
+</head>
+<body>
+
+<form class="form-items" method="POST" name="login" th:action="@{/login}">
+    <div class="form-input">
+        <label for="user_email"></label>
+        <input class="primary-input" id="user_email" type="email" placeholder="email" name="email">
+        <label for="user_password"></label>
+        <input class="primary-input" id="user_password" type="password" placeholder="password"
+               name="password">
+    </div>
+    <div class="remember-inputs">
+        <div class="remember">
+            <input type="checkbox" id="remember_me" class="remember-me" name="remember_me"
+                   value="remember-me">
+            <label for="remember_me">Remember Me</label><br>
+        </div>
+        <div class="forgot-pass">
+            <a class="forgot-password" th:href="@{/password}">Forgot password</a>
+        </div>
+    </div>
+    <button class="login_btn" type="submit">Sign in</button>
+    <span class="create_account">Don’t have an account?<a class="colored_link" th:href="@{/register}">Sign up free!</a></span>
+</form>
+</body>
+</html>

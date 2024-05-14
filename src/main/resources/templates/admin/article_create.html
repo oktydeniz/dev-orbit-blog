@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html"
+      lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{admin/admin_master}">
+<head>
+  <title>Create</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.css" rel="stylesheet">
+</head>
+<body>
+<div layout:fragment="page_content">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" id="article-create">
+      <form id="editForm" method="POST" action="/orbit/upload" enctype="multipart/form-data">
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" class="form-control" id="title" name="title" >
+        </div>
+        <div class="form-group">
+          <label for="slug">Slug</label>
+          <input type="text" class="form-control" id="slug" name="slug">
+        </div>
+        <div class="form-group">
+          <label for="url">Url</label>
+          <input type="url" class="form-control" id="url" name="url" >
+          <div >
+            <label for="imageInput">Choose file to upload</label>
+            <input type="file" id="imageInput" name="file" accept="image/*">
+            <div id="imageContainer"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="readTime">Read Time</label>
+          <input type="number" class="form-control" id="readTime" name="readTime" >
+        </div>
+        <div class="form-group">
+          <label for="categories">Categories</label>
+          <select class="form-control" id="categories">
+            <option th:each="item : ${menuItems}" th:value="${item.id}" th:text="${item.title}">Category</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="summernote">Content</label>
+          <textarea id="summernote" name="Content"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="cancel" data-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="saveNew">Save</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<div layout:fragment="page_scripts">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.js"></script>
+</div>
+</body>
+</html>

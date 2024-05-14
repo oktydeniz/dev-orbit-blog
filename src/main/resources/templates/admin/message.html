@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html"
+      lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{admin/admin_master}">
+<head>
+  <title>Create</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.css" rel="stylesheet">
+</head>
+<body>
+<div layout:fragment="page_content">
+  <div class="message-content">
+    <h1>Messages</h1>
+    <table class="table tbl-message">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>From</th>
+        <th>About</th>
+        <th>Content</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="item : ${messages}">
+        <td th:text="${item.fullName}"></td>
+        <td th:text="${item.mail}"></td>
+        <td th:text="${item.about}"></td>
+        <td th:text="${item.content}"></td>
+        <td>
+          <button th:attr="data-id=${item.id}" class="showMessage btn btn-primary">Show</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editModalLabel">Edit Menu Item</h5>
+          <button type="button" id="closePopup" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form">
+            <div class="form-input">
+              <label for="name">Full Name</label>
+              <input name="name" required type="text" id="name">
+            </div>
+            <div class="form-input">
+              <label for="mail">Mail</label>
+              <input name="name" required type="email" id="mail">
+            </div>
+            <div class="form-input">
+              <label for="about">About</label>
+              <input name="name" required type="text" id="about">
+            </div>
+            <div class="form-input" style="margin-top:20px;">
+              <label for="content">Content</label>
+              <textarea name="content" id="content" cols="40" rows="5"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div layout:fragment="page_scripts">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.js"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+/* line 3, ../sass/admin.scss */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to bottom, #374051, #333b4c, #2e3747, #2a3243, #262e3e, #232b3b, #212838, #1e2535, #1c2333, #1a2131, #181f2f, #161d2d);
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* line 13, ../sass/admin.scss */
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* line 21, ../sass/admin.scss */
+table, tr, td {
+  color: white;
+}
+/* line 24, ../sass/admin.scss */
+table tbody tr:hover, tr tbody tr:hover, td tbody tr:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+/* line 30, ../sass/admin.scss */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 10%;
+  color: white;
+  margin-top: 60px;
+  overflow-y: auto;
+  min-height: calc(100vh - 60px);
+  height: auto;
+}
+
+/* line 42, ../sass/admin.scss */
+.modal-body {
+  color: black !important;
+}
+
+/* line 46, ../sass/admin.scss */
+.img-content {
+  display: flex;
+  flex-direction: row;
+}
+
+/* line 51, ../sass/admin.scss */
+.article-model {
+  width: 60%;
+  height: 250px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+/* line 61, ../sass/admin.scss */
+.form {
+  align-self: center;
+  flex-direction: column;
+  display: flex;
+}
+/* line 67, ../sass/admin.scss */
+.form .form-input {
+  display: flex;
+  margin-top: 12px;
+  flex-direction: column;
+}
+/* line 72, ../sass/admin.scss */
+.form .form-input input {
+  width: 470px;
+  background-color: transparent;
+  color: #A9ADB3;
+  height: 42px;
+  padding: 5px;
+  border: 1px solid #A9ADB3;
+}
+/* line 80, ../sass/admin.scss */
+.form .form-input textarea {
+  border: 1px solid #A9ADB3;
+  background-color: transparent;
+  color: #A9ADB3;
+  padding: 5px;
+}

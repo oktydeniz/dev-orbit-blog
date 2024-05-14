@@ -1,0 +1,25 @@
+$application-red:#E9362A;
+$application-light-green:#A9DFD8;
+$text-color-dark:#696A6F;
+$text-color-light:#F6F6F6;
+$text-color-green:#A1D4CF;
+$application-white:#B3B5B9;
+$search-bg-color-dark:#21222D;
+$scheduled-card-bg:#171821;
+$user-bms-card-bg:#2F353E;
+$white:#FFFFFF;
+$text-color-gray:#B3B5B9;
+$text-gray:#A5A5AA;
+
+
+
+@mixin gradient-background($color1, $color2) {
+  background: linear-gradient(to right, $color1, $color2);
+}
+
+
+
+@mixin custom-background {
+  background: rgb(34, 193, 195);
+  background: linear-gradient(0deg, rgba(34, 193, 195, 0.9066) 0%, rgba(253, 187, 45, 0) 100%);
+}

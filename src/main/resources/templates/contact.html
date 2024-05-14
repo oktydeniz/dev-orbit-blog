@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html"
+      lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{master}">
+<head>
+  <title>Contact</title>
+</head>
+<body>
+<div layout:fragment="page_content">
+
+
+  <div class="contact-info">
+      <div class="contact-content">
+        Merhaba ve bloğuma hoş geldiniz!<br><br> <p style="text-indent:15px;">Ben Oktay Deniz, günlük yaşamda karşılaştığım problemleri çözme süreçlerimi, deneyimlerimi ve öğrendiklerimi paylaştığım kişisel bir alan yaratma arzusuyla buradayım.
+        Bu blog, bana ait notların bir araya getirilmiş hali olup, hem profesyonel hem de kişisel yaşantımda karşılaştığım çeşitli zorlukları nasıl aştığımı detaylarıyla ele alıyor. Her bir yazımda, günlük hayatta karşılaştığım sorunları hangi yöntemler ve konular üzerinden çözdüğümü, bu süreçlerde edindiğim bilgi ve tecrübeleri sizlerle paylaşmayı hedefliyorum.</p>
+        <p style="text-indent:15px;">Aynı zamanda, sektördeki güncel yöntemler ve piyasada nasıl işler yapıldığına dair gözlemlerimi de aktaracağım. Bu blog, hem benim için bir bilgi deposu görevi görüyor hem de siz değerli okuyucularıma farklı perspektifler sunmayı amaçlıyor.
+        Amacım, karşılaştığım problemlere bulduğum çözümleri, kullandığım yöntemleri ve sektördeki yenilikleri paylaşarak, hem kendimi geliştirmek hem de sizlere ilham vermek. Bloğumda, tecrübelerimden süzülen öneriler, rehberler ve ipuçları bulacaksınız.
+        Bu yolculukta bana eşlik ettiğiniz için teşekkür ederim. Umarım yazılarım sizi bilgilendirir ve ilham verir.</p>
+
+        <div class="contact-me">
+          <p>Sorularınız, önerileriniz veya yorumlarınız için benimle iletişime geçmekten çekinmeyin!</p>
+
+          <div class="form">
+            <div class="form-input">
+              <label for="name">Full Name</label>
+              <input name="name" required type="text" id="name">
+            </div>
+            <div class="form-input">
+              <label for="mail">Mail</label>
+              <input name="name" required type="email" id="mail">
+            </div>
+            <div class="form-input">
+              <label for="about">About</label>
+              <input name="name" required type="text" id="about">
+            </div>
+            <div class="form-input" style="margin-top:20px;">
+              <label for="content">Content</label>
+                <textarea name="content" id="content" cols="40" rows="5"></textarea>
+            </div>
+            <button id="submit" class="submit">Send</button>
+            <div class="send-response">Your message send!</div>
+            <div class="send-response-warning">Something went wrong, please try again later.</div>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+  
+</div>
+
+<div layout:fragment="page_scripts"></div>
+</body>
+</html>
